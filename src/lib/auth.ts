@@ -18,12 +18,12 @@ const verify: VerifyWithoutRequest = function(profile: Profile | null | undefine
 
 const samlStrategy = new SamlStrategy(
   {
-    callbackUrl: 'http://localhost:3000/api/auth/callback',
+    callbackUrl: 'https://lock-frontend-staging-2211ac0de2fd.herokuapp.com/',
     entryPoint: 'https://fed.hermes.com/adfs/ls/',
-    issuer: 'saml-next-app',
+    issuer: 'https://lock-frontend-staging-2211ac0de2fd.herokuapp.com/',
     identifierFormat: 'urn:oasis:names:tc:SAML:2.0:nameid-format:persistent',
     acceptedClockSkewMs: -1,
-    wantAssertionsSigned: true,
+    wantAssertionsSigned: false,
     wantAuthnResponseSigned: false,
     idpCert: '',
     // Add the entity ID from the FederationMetadata.xml
